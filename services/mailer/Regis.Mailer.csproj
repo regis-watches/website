@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Regis.Mailer</RootNamespace>
+    <AssemblyName>Regis.Mailer</AssemblyName>
+    <!-- Run on a newer installed runtime (9, 10) if .NET 8 itself is not installed. No NuGet packages are needed. -->
+    <RollForward>LatestMajor</RollForward>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UseAppHost>false</UseAppHost>
+  </PropertyGroup>
+
+</Project>

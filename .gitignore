@@ -1,0 +1,12 @@
+.env
+data/
+node_modules/
+web/dist/
+services/payments/target/
+services/analytics/out/
+services/mailer/bin/
+services/mailer/obj/
+__pycache__/
+.pytest_cache/
+scripts/.*.ttf
+*.log

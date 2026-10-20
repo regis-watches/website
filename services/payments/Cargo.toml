@@ -1,0 +1,25 @@
+[package]
+name = "regis-payments"
+version = "1.0.0"
+edition = "2021"
+description = "Regis payments service: the only place that holds the Paystack secret key."
+
+[dependencies]
+axum = "0.7"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net"] }
+reqwest = { version = "0.11", default-features = false, features = ["json", "rustls-tls"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+hmac = "0.12"
+sha2 = "0.10"
+hex = "0.4"
+subtle = "2"
+# Pinned so the dependency tree avoids crates that need Rust 1.82+. Newer toolchains accept this too.
+url = "=2.5.0"
+indexmap = "=2.7.1"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
